@@ -1,5 +1,12 @@
 import { useRef, useEffect } from "react";
 
+interface Grad {
+  x: number;
+  y: number;
+  z: number;
+  dot2: (x: number, y: number) => number;
+}
+
 class Grad {
   x: number;
   y: number;
@@ -16,7 +23,23 @@ class Grad {
   }
 }
 
+interface Noise {
+  grad3: Grad[];
+  p: number[];
+  perm: number[];
+  gradP: Grad[];
+  seed: (seed: number) => void;
+  fade: (t: number) => number;
+  lerp: (a: number, b: number, t: number) => number;
+  perlin2: (x: number, y: number) => number;
+}
+
 class Noise {
+  grad3: Grad[];
+  p: number[];
+  perm: number[];
+  gradP: Grad[];
+
   constructor(seed = 0) {
     this.grad3 = [
       new Grad(1, 1, 0),
