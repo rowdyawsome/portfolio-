@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Waves from "@/components/Waves";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [name, setName] = useState("Chukwubuike Divine");
+  const [name] = useState("Chukwubuike Divine");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -79,7 +80,7 @@ export default function Home() {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Failed to send message. Please try again.",
@@ -363,9 +364,11 @@ export default function Home() {
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
               >
                 <div className="h-48 bg-gray-200 dark:bg-gray-700">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.label}
+                    width={500}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                 </div>
