@@ -238,7 +238,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#"
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base"
+                className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition-colors text-sm sm:text-base"
               >
                 View My Work
               </motion.a>
@@ -246,7 +246,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact"
-                className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition-colors text-sm sm:text-base"
+                className="px-4 sm:px-6 py-2 sm:py-3 border-2 bg-blue-500 border-white-500 text-white-500 rounded-full hover:bg-blue-600 hover:text-white transition-colors text-sm sm:text-base"
               >
                 Contact Me
               </motion.a>
